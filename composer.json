@@ -1,0 +1,18 @@
+{
+    "name": "Compaya/vies-service",
+    "description": "Auto generated, hand corrected, php files based on https://ec.europa.eu/taxation_customs/vies/checkVatTestService.wsdl",
+    "autoload": {
+        "psr-4": {
+            "Compaya\\ViesService\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mads Jensen",
+            "email": "mads@compaya.dk"
+        }
+    ],
+    "require": {
+        "ext-soap": "*"
+    }
+}
