@@ -2,58 +2,58 @@
 
 namespace Compaya\ViesService;
 
-class checkVatApprox {
+class CheckVatApprox {
 
 	/**
 	 * @var string $countryCode
 	 */
-	protected $countryCode = null;
+	protected $countryCode;
 
 	/**
 	 * @var string $vatNumber
 	 */
-	protected $vatNumber = null;
+	protected $vatNumber;
 
 	/**
 	 * @var string $traderName
 	 */
-	protected $traderName = null;
+	protected $traderName;
 
 	/**
-	 * @var companyTypeCode $traderCompanyType
+	 * @var string $traderCompanyType
 	 */
-	protected $traderCompanyType = null;
+	protected $traderCompanyType;
 
 	/**
 	 * @var string $traderStreet
 	 */
-	protected $traderStreet = null;
+	protected $traderStreet;
 
 	/**
 	 * @var string $traderPostcode
 	 */
-	protected $traderPostcode = null;
+	protected $traderPostcode;
 
 	/**
 	 * @var string $traderCity
 	 */
-	protected $traderCity = null;
+	protected $traderCity;
 
 	/**
 	 * @var string $requesterCountryCode
 	 */
-	protected $requesterCountryCode = null;
+	protected $requesterCountryCode;
 
 	/**
 	 * @var string $requesterVatNumber
 	 */
-	protected $requesterVatNumber = null;
+	protected $requesterVatNumber;
 
 	/**
 	 * @param string          $countryCode
 	 * @param string          $vatNumber
 	 * @param string          $traderName
-	 * @param companyTypeCode $traderCompanyType
+	 * @param string          $traderCompanyType
 	 * @param string          $traderStreet
 	 * @param string          $traderPostcode
 	 * @param string          $traderCity
@@ -81,7 +81,7 @@ class checkVatApprox {
 
 	/**
 	 * @param string $countryCode
-	 * @return checkVatApprox
+	 * @return CheckVatApprox
 	 */
 	public function setCountryCode($countryCode) {
 		$this->countryCode = $countryCode;
@@ -98,7 +98,7 @@ class checkVatApprox {
 
 	/**
 	 * @param string $vatNumber
-	 * @return checkVatApprox
+	 * @return CheckVatApprox
 	 */
 	public function setVatNumber($vatNumber) {
 		$this->vatNumber = $vatNumber;
@@ -115,7 +115,7 @@ class checkVatApprox {
 
 	/**
 	 * @param string $traderName
-	 * @return checkVatApprox
+	 * @return CheckVatApprox
 	 */
 	public function setTraderName($traderName) {
 		$this->traderName = $traderName;
@@ -124,15 +124,15 @@ class checkVatApprox {
 	}
 
 	/**
-	 * @return companyTypeCode
+	 * @return string
 	 */
 	public function getTraderCompanyType() {
 		return $this->traderCompanyType;
 	}
 
 	/**
-	 * @param companyTypeCode $traderCompanyType
-	 * @return checkVatApprox
+	 * @param string $traderCompanyType
+	 * @return CheckVatApprox
 	 */
 	public function setTraderCompanyType($traderCompanyType) {
 		$this->traderCompanyType = $traderCompanyType;
@@ -149,7 +149,7 @@ class checkVatApprox {
 
 	/**
 	 * @param string $traderStreet
-	 * @return checkVatApprox
+	 * @return CheckVatApprox
 	 */
 	public function setTraderStreet($traderStreet) {
 		$this->traderStreet = $traderStreet;
@@ -166,7 +166,7 @@ class checkVatApprox {
 
 	/**
 	 * @param string $traderPostcode
-	 * @return checkVatApprox
+	 * @return CheckVatApprox
 	 */
 	public function setTraderPostcode($traderPostcode) {
 		$this->traderPostcode = $traderPostcode;
@@ -183,7 +183,7 @@ class checkVatApprox {
 
 	/**
 	 * @param string $traderCity
-	 * @return checkVatApprox
+	 * @return CheckVatApprox
 	 */
 	public function setTraderCity($traderCity) {
 		$this->traderCity = $traderCity;
@@ -200,7 +200,7 @@ class checkVatApprox {
 
 	/**
 	 * @param string $requesterCountryCode
-	 * @return checkVatApprox
+	 * @return CheckVatApprox
 	 */
 	public function setRequesterCountryCode($requesterCountryCode) {
 		$this->requesterCountryCode = $requesterCountryCode;
@@ -217,7 +217,7 @@ class checkVatApprox {
 
 	/**
 	 * @param string $requesterVatNumber
-	 * @return checkVatApprox
+	 * @return CheckVatApprox
 	 */
 	public function setRequesterVatNumber($requesterVatNumber) {
 		$this->requesterVatNumber = $requesterVatNumber;

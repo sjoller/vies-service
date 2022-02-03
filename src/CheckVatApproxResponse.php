@@ -2,104 +2,106 @@
 
 namespace Compaya\ViesService;
 
-class checkVatApproxResponse {
+use DateTime;
+
+class CheckVatApproxResponse {
 
 	/**
 	 * @var string $countryCode
 	 */
-	protected $countryCode = null;
+	protected $countryCode;
 
 	/**
 	 * @var string $vatNumber
 	 */
-	protected $vatNumber = null;
+	protected $vatNumber;
 
 	/**
-	 * @var date $requestDate
+	 * @var DateTime $requestDate
 	 */
-	protected $requestDate = null;
+	protected $requestDate;
 
 	/**
 	 * @var boolean $valid
 	 */
-	protected $valid = null;
+	protected $valid;
 
 	/**
 	 * @var string $traderName
 	 */
-	protected $traderName = null;
+	protected $traderName;
 
 	/**
-	 * @var companyTypeCode $traderCompanyType
+	 * @var string $traderCompanyType
 	 */
-	protected $traderCompanyType = null;
+	protected $traderCompanyType;
 
 	/**
 	 * @var string $traderAddress
 	 */
-	protected $traderAddress = null;
+	protected $traderAddress;
 
 	/**
 	 * @var string $traderStreet
 	 */
-	protected $traderStreet = null;
+	protected $traderStreet;
 
 	/**
 	 * @var string $traderPostcode
 	 */
-	protected $traderPostcode = null;
+	protected $traderPostcode;
 
 	/**
 	 * @var string $traderCity
 	 */
-	protected $traderCity = null;
+	protected $traderCity;
 
 	/**
-	 * @var matchCode $traderNameMatch
+	 * @var MatchCode $traderNameMatch
 	 */
-	protected $traderNameMatch = null;
+	protected $traderNameMatch;
 
 	/**
-	 * @var matchCode $traderCompanyTypeMatch
+	 * @var MatchCode $traderCompanyTypeMatch
 	 */
-	protected $traderCompanyTypeMatch = null;
+	protected $traderCompanyTypeMatch;
 
 	/**
-	 * @var matchCode $traderStreetMatch
+	 * @var MatchCode $traderStreetMatch
 	 */
-	protected $traderStreetMatch = null;
+	protected $traderStreetMatch;
 
 	/**
-	 * @var matchCode $traderPostcodeMatch
+	 * @var MatchCode $traderPostcodeMatch
 	 */
-	protected $traderPostcodeMatch = null;
+	protected $traderPostcodeMatch;
 
 	/**
-	 * @var matchCode $traderCityMatch
+	 * @var MatchCode $traderCityMatch
 	 */
-	protected $traderCityMatch = null;
+	protected $traderCityMatch;
 
 	/**
 	 * @var string $requestIdentifier
 	 */
-	protected $requestIdentifier = null;
+	protected $requestIdentifier;
 
 	/**
 	 * @param string          $countryCode
 	 * @param string          $vatNumber
-	 * @param date            $requestDate
+	 * @param DateTime        $requestDate
 	 * @param boolean         $valid
 	 * @param string          $traderName
-	 * @param companyTypeCode $traderCompanyType
+	 * @param string $traderCompanyType
 	 * @param string          $traderAddress
 	 * @param string          $traderStreet
 	 * @param string          $traderPostcode
 	 * @param string          $traderCity
-	 * @param matchCode       $traderNameMatch
-	 * @param matchCode       $traderCompanyTypeMatch
-	 * @param matchCode       $traderStreetMatch
-	 * @param matchCode       $traderPostcodeMatch
-	 * @param matchCode       $traderCityMatch
+	 * @param MatchCode       $traderNameMatch
+	 * @param MatchCode       $traderCompanyTypeMatch
+	 * @param MatchCode       $traderStreetMatch
+	 * @param MatchCode       $traderPostcodeMatch
+	 * @param MatchCode       $traderCityMatch
 	 * @param string          $requestIdentifier
 	 */
 	public function __construct($countryCode, $vatNumber, $requestDate, $valid, $traderName, $traderCompanyType, $traderAddress, $traderStreet, $traderPostcode, $traderCity, $traderNameMatch, $traderCompanyTypeMatch, $traderStreetMatch, $traderPostcodeMatch, $traderCityMatch, $requestIdentifier) {
@@ -130,7 +132,7 @@ class checkVatApproxResponse {
 
 	/**
 	 * @param string $countryCode
-	 * @return checkVatApproxResponse
+	 * @return CheckVatApproxResponse
 	 */
 	public function setCountryCode($countryCode) {
 		$this->countryCode = $countryCode;
@@ -147,7 +149,7 @@ class checkVatApproxResponse {
 
 	/**
 	 * @param string $vatNumber
-	 * @return checkVatApproxResponse
+	 * @return CheckVatApproxResponse
 	 */
 	public function setVatNumber($vatNumber) {
 		$this->vatNumber = $vatNumber;
@@ -156,15 +158,15 @@ class checkVatApproxResponse {
 	}
 
 	/**
-	 * @return date
+	 * @return DateTime
 	 */
 	public function getRequestDate() {
 		return $this->requestDate;
 	}
 
 	/**
-	 * @param date $requestDate
-	 * @return checkVatApproxResponse
+	 * @param DateTime $requestDate
+	 * @return CheckVatApproxResponse
 	 */
 	public function setRequestDate($requestDate) {
 		$this->requestDate = $requestDate;
@@ -181,7 +183,7 @@ class checkVatApproxResponse {
 
 	/**
 	 * @param boolean $valid
-	 * @return checkVatApproxResponse
+	 * @return CheckVatApproxResponse
 	 */
 	public function setValid($valid) {
 		$this->valid = $valid;
@@ -198,7 +200,7 @@ class checkVatApproxResponse {
 
 	/**
 	 * @param string $traderName
-	 * @return checkVatApproxResponse
+	 * @return CheckVatApproxResponse
 	 */
 	public function setTraderName($traderName) {
 		$this->traderName = $traderName;
@@ -207,15 +209,15 @@ class checkVatApproxResponse {
 	}
 
 	/**
-	 * @return companyTypeCode
+	 * @return string
 	 */
 	public function getTraderCompanyType() {
 		return $this->traderCompanyType;
 	}
 
 	/**
-	 * @param companyTypeCode $traderCompanyType
-	 * @return checkVatApproxResponse
+	 * @param string $traderCompanyType
+	 * @return CheckVatApproxResponse
 	 */
 	public function setTraderCompanyType($traderCompanyType) {
 		$this->traderCompanyType = $traderCompanyType;
@@ -232,7 +234,7 @@ class checkVatApproxResponse {
 
 	/**
 	 * @param string $traderAddress
-	 * @return checkVatApproxResponse
+	 * @return CheckVatApproxResponse
 	 */
 	public function setTraderAddress($traderAddress) {
 		$this->traderAddress = $traderAddress;
@@ -249,7 +251,7 @@ class checkVatApproxResponse {
 
 	/**
 	 * @param string $traderStreet
-	 * @return checkVatApproxResponse
+	 * @return CheckVatApproxResponse
 	 */
 	public function setTraderStreet($traderStreet) {
 		$this->traderStreet = $traderStreet;
@@ -266,7 +268,7 @@ class checkVatApproxResponse {
 
 	/**
 	 * @param string $traderPostcode
-	 * @return checkVatApproxResponse
+	 * @return CheckVatApproxResponse
 	 */
 	public function setTraderPostcode($traderPostcode) {
 		$this->traderPostcode = $traderPostcode;
@@ -283,7 +285,7 @@ class checkVatApproxResponse {
 
 	/**
 	 * @param string $traderCity
-	 * @return checkVatApproxResponse
+	 * @return CheckVatApproxResponse
 	 */
 	public function setTraderCity($traderCity) {
 		$this->traderCity = $traderCity;
@@ -292,15 +294,15 @@ class checkVatApproxResponse {
 	}
 
 	/**
-	 * @return matchCode
+	 * @return MatchCode
 	 */
 	public function getTraderNameMatch() {
 		return $this->traderNameMatch;
 	}
 
 	/**
-	 * @param matchCode $traderNameMatch
-	 * @return checkVatApproxResponse
+	 * @param MatchCode $traderNameMatch
+	 * @return CheckVatApproxResponse
 	 */
 	public function setTraderNameMatch($traderNameMatch) {
 		$this->traderNameMatch = $traderNameMatch;
@@ -309,15 +311,15 @@ class checkVatApproxResponse {
 	}
 
 	/**
-	 * @return matchCode
+	 * @return MatchCode
 	 */
 	public function getTraderCompanyTypeMatch() {
 		return $this->traderCompanyTypeMatch;
 	}
 
 	/**
-	 * @param matchCode $traderCompanyTypeMatch
-	 * @return checkVatApproxResponse
+	 * @param MatchCode $traderCompanyTypeMatch
+	 * @return CheckVatApproxResponse
 	 */
 	public function setTraderCompanyTypeMatch($traderCompanyTypeMatch) {
 		$this->traderCompanyTypeMatch = $traderCompanyTypeMatch;
@@ -326,15 +328,15 @@ class checkVatApproxResponse {
 	}
 
 	/**
-	 * @return matchCode
+	 * @return MatchCode
 	 */
 	public function getTraderStreetMatch() {
 		return $this->traderStreetMatch;
 	}
 
 	/**
-	 * @param matchCode $traderStreetMatch
-	 * @return checkVatApproxResponse
+	 * @param MatchCode $traderStreetMatch
+	 * @return CheckVatApproxResponse
 	 */
 	public function setTraderStreetMatch($traderStreetMatch) {
 		$this->traderStreetMatch = $traderStreetMatch;
@@ -343,15 +345,15 @@ class checkVatApproxResponse {
 	}
 
 	/**
-	 * @return matchCode
+	 * @return MatchCode
 	 */
 	public function getTraderPostcodeMatch() {
 		return $this->traderPostcodeMatch;
 	}
 
 	/**
-	 * @param matchCode $traderPostcodeMatch
-	 * @return checkVatApproxResponse
+	 * @param MatchCode $traderPostcodeMatch
+	 * @return CheckVatApproxResponse
 	 */
 	public function setTraderPostcodeMatch($traderPostcodeMatch) {
 		$this->traderPostcodeMatch = $traderPostcodeMatch;
@@ -360,15 +362,15 @@ class checkVatApproxResponse {
 	}
 
 	/**
-	 * @return matchCode
+	 * @return MatchCode
 	 */
 	public function getTraderCityMatch() {
 		return $this->traderCityMatch;
 	}
 
 	/**
-	 * @param matchCode $traderCityMatch
-	 * @return checkVatApproxResponse
+	 * @param MatchCode $traderCityMatch
+	 * @return CheckVatApproxResponse
 	 */
 	public function setTraderCityMatch($traderCityMatch) {
 		$this->traderCityMatch = $traderCityMatch;
@@ -385,7 +387,7 @@ class checkVatApproxResponse {
 
 	/**
 	 * @param string $requestIdentifier
-	 * @return checkVatApproxResponse
+	 * @return CheckVatApproxResponse
 	 */
 	public function setRequestIdentifier($requestIdentifier) {
 		$this->requestIdentifier = $requestIdentifier;

@@ -2,42 +2,44 @@
 
 namespace Compaya\ViesService;
 
-class checkVatResponse {
+use DateTime;
+
+class CheckVatResponse {
 
 	/**
 	 * @var string $countryCode
 	 */
-	protected $countryCode = null;
+	protected $countryCode;
 
 	/**
 	 * @var string $vatNumber
 	 */
-	protected $vatNumber = null;
+	protected $vatNumber;
 
 	/**
-	 * @var date $requestDate
+	 * @var DateTime $requestDate
 	 */
-	protected $requestDate = null;
+	protected $requestDate;
 
 	/**
 	 * @var boolean $valid
 	 */
-	protected $valid = null;
+	protected $valid;
 
 	/**
 	 * @var string $name
 	 */
-	protected $name = null;
+	protected $name;
 
 	/**
 	 * @var string $address
 	 */
-	protected $address = null;
+	protected $address;
 
 	/**
 	 * @param string  $countryCode
 	 * @param string  $vatNumber
-	 * @param date    $requestDate
+	 * @param DateTime$requestDate
 	 * @param boolean $valid
 	 * @param string  $name
 	 * @param string  $address
@@ -60,7 +62,7 @@ class checkVatResponse {
 
 	/**
 	 * @param string $countryCode
-	 * @return checkVatResponse
+	 * @return CheckVatResponse
 	 */
 	public function setCountryCode($countryCode) {
 		$this->countryCode = $countryCode;
@@ -77,7 +79,7 @@ class checkVatResponse {
 
 	/**
 	 * @param string $vatNumber
-	 * @return checkVatResponse
+	 * @return CheckVatResponse
 	 */
 	public function setVatNumber($vatNumber) {
 		$this->vatNumber = $vatNumber;
@@ -86,15 +88,15 @@ class checkVatResponse {
 	}
 
 	/**
-	 * @return date
+	 * @return DateTime
 	 */
 	public function getRequestDate() {
 		return $this->requestDate;
 	}
 
 	/**
-	 * @param date $requestDate
-	 * @return checkVatResponse
+	 * @param DateTime $requestDate
+	 * @return CheckVatResponse
 	 */
 	public function setRequestDate($requestDate) {
 		$this->requestDate = $requestDate;
@@ -111,7 +113,7 @@ class checkVatResponse {
 
 	/**
 	 * @param boolean $valid
-	 * @return checkVatResponse
+	 * @return CheckVatResponse
 	 */
 	public function setValid($valid) {
 		$this->valid = $valid;
@@ -128,7 +130,7 @@ class checkVatResponse {
 
 	/**
 	 * @param string $name
-	 * @return checkVatResponse
+	 * @return CheckVatResponse
 	 */
 	public function setName($name) {
 		$this->name = $name;
@@ -145,7 +147,7 @@ class checkVatResponse {
 
 	/**
 	 * @param string $address
-	 * @return checkVatResponse
+	 * @return CheckVatResponse
 	 */
 	public function setAddress($address) {
 		$this->address = $address;

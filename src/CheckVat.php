@@ -2,17 +2,17 @@
 
 namespace Compaya\ViesService;
 
-class checkVat {
+class CheckVat {
 
 	/**
 	 * @var string $countryCode
 	 */
-	protected $countryCode = null;
+	protected $countryCode;
 
 	/**
 	 * @var string $vatNumber
 	 */
-	protected $vatNumber = null;
+	protected $vatNumber;
 
 	/**
 	 * @param string $countryCode
@@ -32,7 +32,7 @@ class checkVat {
 
 	/**
 	 * @param string $countryCode
-	 * @return checkVat
+	 * @return CheckVat
 	 */
 	public function setCountryCode($countryCode) {
 		$this->countryCode = $countryCode;
@@ -49,7 +49,7 @@ class checkVat {
 
 	/**
 	 * @param string $vatNumber
-	 * @return checkVat
+	 * @return CheckVat
 	 */
 	public function setVatNumber($vatNumber) {
 		$this->vatNumber = $vatNumber;
