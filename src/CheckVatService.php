@@ -11,7 +11,7 @@ class CheckVatService extends SoapClient {
 	 * @param string $wsdl    The wsdl file to use
 	 * @throws SoapFault
 	 */
-	public function __construct(array $options = array(), $wsdl = 'https://ec.europa.eu/taxation_customs/vies/CheckVatService.wsdl') {
+	public function __construct(array $options = array(), $wsdl = 'http://ec.europa.eu/taxation_customs/vies/checkVatService.wsdl') {
 		parent::__construct($wsdl, $options);
 	}
 
