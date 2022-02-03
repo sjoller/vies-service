@@ -11,7 +11,7 @@ class CheckVatTestService extends SoapClient {
 	 * @param string $wsdl    The wsdl file to use
 	 * @throws SoapFault
 	 */
-	public function __construct(array $options = [], $wsdl = 'http://ec.europa.eu/taxation_customs/vies/services/checkVatTestService') {
+	public function __construct(array $options = [], $wsdl = 'https://ec.europa.eu/taxation_customs/vies/checkVatTestService.wsdl') {
 		parent::__construct($wsdl, $options);
 	}
 
@@ -20,7 +20,7 @@ class CheckVatTestService extends SoapClient {
 	 * @return CheckVatResponse
 	 */
 	public function CheckVat(CheckVat $parameters) {
-		return $this->__soapCall('CheckVat', array($parameters));
+		return $this->__soapCall('checkVat', array($parameters));
 	}
 
 	/**
@@ -28,7 +28,7 @@ class CheckVatTestService extends SoapClient {
 	 * @return CheckVatApproxResponse
 	 */
 	public function CheckVatApprox(CheckVatApprox $parameters) {
-		return $this->__soapCall('CheckVatApprox', array($parameters));
+		return $this->__soapCall('checkVatApprox', array($parameters));
 	}
 
 }
