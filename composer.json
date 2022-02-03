@@ -1,5 +1,6 @@
 {
-    "name": "Compaya/vies-service",
+    "name": "compaya/vies-service",
+    "type": "library",
     "description": "Auto generated, hand corrected, php files based on https://ec.europa.eu/taxation_customs/vies/checkVatTestService.wsdl",
     "autoload": {
         "psr-4": {
